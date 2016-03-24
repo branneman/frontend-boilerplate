@@ -38,16 +38,25 @@ module.exports = {
 
     docs: {
         src: {
-            index: base.docs + '/index.html',
+            indexTpl: base.docs + '/templates/index.html',
             templates: base.src + '/templates',
-            templatesAll: base.src + '/templates/**/**.html',
+            templatesAll: base.src + '/templates/**/*.html',
+            components: base.src + '/components/',
+            componentsTpl: base.docs + '/templates/components.html',
+            componentsAll: base.src + '/components/**/!(_)*.html',
+            componentsYml: base.src + '/components/**/!(_)*.yml',
+            componentsDemoTpl: base.docs + '/templates/components-demo.html',
             statics: base.docs + '/static/**'
         },
         dist: {
             base: base.dist,
             index: base.dist + '/index.html',
+            components: base.dist + '/components/',
             static: base.dist + '/docs/static/',
             sassdocs: base.dist + '/docs/sassdoc'
+        },
+        data: {
+            name: 'Front-End Bootstrap'
         }
     },
 

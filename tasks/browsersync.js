@@ -10,8 +10,8 @@ gulp.task('browsersync', function() {
         server: {
             baseDir: config.browsersync.dist.base
         },
-        /*ghostMode: false,
-        notify: false,*/
+        /*ghostMode: false,*/
+        notify: false,
         open: false
     });
 });

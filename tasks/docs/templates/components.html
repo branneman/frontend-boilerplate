@@ -1,0 +1,9 @@
+{% extends 'layout/default.html' %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+    <a href="{{ baseUrl }}">&laquo; Overview</a>
+    {{ marked(description) }}
+    <h2>Demo</h2>
+    <iframe src="{{ demoUrl }}" data-resize-to-content></iframe>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% extends 'layout/framed.html' %}
+
+{% block body %}
+    {{ demo|replace('{}', _component.contents)|safe }}
+{% endblock %}

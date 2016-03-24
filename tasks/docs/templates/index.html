@@ -1,0 +1,24 @@
+{% extends 'layout/default.html' %}
+
+{% block body %}
+    <h1>{{ pkg.name }}</h1>
+    <p>Last updated: {{ lastUpdated }}</p>
+    <!--[[dist.zip]]-->
+
+    <h2>Templates</h2>
+    <ol>
+    {%- for tpl in templates %}
+        <li><a href="templates/{{ tpl }}">{{ tpl|replace('/', ' / ') }}</a></li>
+    {%- endfor %}
+    </ol>
+
+    <h2>Components</h2>
+    <ol>
+    {%- for comp in components %}
+        <li><a href="components/{{ comp.path }}">{{ comp.title }}</a></li>
+    {%- endfor %}
+    </ol>
+
+    <h2>Sassdoc</h2>
+    <p><a href="docs/sassdoc/index.html">Sassdoc</a></p>
+{% endblock %}
